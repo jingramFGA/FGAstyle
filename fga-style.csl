@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never">
+  <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/) -->
+  <info>
+    <title>FGA style</title>
+    <id>http://www.zotero.org/styles/fga-style</id>
+    <link rel="self" href="http://www.zotero.org/styles/fga-style"/>
+    <updated>2022-02-28T21:30:16+00:00</updated>
+  </info>
+  <citation>
+    <layout/>
+  </citation>
+  <bibliography>
+    <layout>
+      <choose>
+        <if type="article article-journal article-magazine article-newspaper" match="any">
+          <names variable="author">
+            <name delimiter="" and="text" et-al-min="3" et-al-use-first="1"/>
+          </names>
+          <text variable="title" text-case="capitalize-first" strip-periods="true" quotes="true" prefix=", " suffix=","/>
+          <text variable="container-title" prefix=" " suffix=" "/>
+          <date date-parts="year" form="text" variable="issued" prefix="(" suffix="), "/>
+          <text variable="URL" suffix="."/>
+        </if>
+      </choose>
+      <choose>
+        <if type="report" match="any">
+          <names variable="author">
+            <name delimiter="" and="text" et-al-min="3" et-al-use-first="1"/>
+          </names>
+          <text variable="title" text-case="capitalize-first" strip-periods="true" quotes="true" prefix=", " suffix=","/>
+          <text variable="publisher" text-case="title" prefix=" "/>
+          <date date-parts="year" form="text" variable="issued" prefix=" (" suffix="), "/>
+          <text variable="URL" suffix="."/>
+        </if>
+      </choose>
+      <choose>
+        <if type="legal_case" match="any">
+          <text variable="title" suffix=", "/>
+          <text variable="volume"/>
+          <text variable="container-title" suffix=" "/>
+          <text variable="page-first" suffix=" "/>
+          <text variable="locator" prefix="(" suffix=" "/>
+          <date date-parts="year" form="text" variable="issued" suffix="), "/>
+          <text variable="URL" suffix="."/>
+        </if>
+      </choose>
+    </layout>
+  </bibliography>
+</style>
